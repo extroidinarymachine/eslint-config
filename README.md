@@ -1,1 +1,1 @@
-# eslint-config
+# @madefromfatigue/eslint-config
