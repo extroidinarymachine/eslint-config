@@ -1,0 +1,2 @@
+- [ ] Documentation
+- [ ] One code block of bash commands to initialize a node project with the config.
