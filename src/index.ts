@@ -13,12 +13,17 @@ const sheriffOptions: SheriffTypes.SheriffSettings = {
 };
 
 const config: readonly EslintDefineConfig.FlatESLintConfig[] = [
-  ...<EslintDefineConfig.FlatESLintConfig[]>Sheriff(sheriffOptions),
+  ...Sheriff(sheriffOptions) as EslintDefineConfig.FlatESLintConfig[],
   {
     rules: {
       'func-style': [
         'error', 
         'declaration'
+      ],
+      'no-param-reassign': [
+        'error', {
+          'props': false
+        }
       ],
       '@typescript-eslint/naming-convention': [
         'error', 
