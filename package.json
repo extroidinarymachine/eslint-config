@@ -1,11 +1,14 @@
 {
   "name": "@madefromfatigue/eslint-config",
   "description": "madefromfatigue eslint config",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "author": "madefromfatigue",
   "type": "module",
   "exports": {
     ".": "./dist/index.js"
+  },
+  "scripts": {
+    "compile": "rm -rf dist && tsc"
   },
   "devDependencies": {
     "@sherifforg/types": "^3.0.0",
