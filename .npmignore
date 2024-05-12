@@ -3,3 +3,4 @@ tsconfig.json
 .gitignore
 src
 TODO.md
+eslint.config.js
