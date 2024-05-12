@@ -1,8 +1,9 @@
-import sheriff from 'eslint-config-sheriff';
-import { defineFlatConfig } from 'eslint-define-config';
-import type { SheriffSettings } from '@sherifforg/types';
+import Sheriff from 'eslint-config-sheriff';
+import * as EslintDefineConfig from 'eslint-define-config';
+import type * as SheriffTypes from '@sherifforg/types';
 
-const sheriffOptions: SheriffSettings = {
+
+const sheriffOptions: SheriffTypes.SheriffSettings = {
   react: false,
   next: false,
   lodash: false,
@@ -11,8 +12,8 @@ const sheriffOptions: SheriffSettings = {
   vitest: false,
 };
 
-export default defineFlatConfig([
-  ...sheriff(sheriffOptions),
+const config: readonly EslintDefineConfig.FlatESLintConfig[] = [
+  ...<EslintDefineConfig.FlatESLintConfig[]>Sheriff(sheriffOptions),
   {
     rules: {
       'func-style': [
@@ -21,7 +22,6 @@ export default defineFlatConfig([
       ],
       '@typescript-eslint/naming-convention': [
         'error', 
-        [
           {
             selector: 'default',
             format: [
@@ -33,7 +33,7 @@ export default defineFlatConfig([
           {
             selector: 'import',
             format: [
-              'CamelCase',
+              'PascalCase',
             ],
             leadingUnderscore: 'forbid',
             trailingUnderscore: 'forbid'
@@ -97,8 +97,9 @@ export default defineFlatConfig([
             selector: 'typeProperty',
             format: null
           }
-        ]
       ]
     }
   }
-]);
+];
+
+export default EslintDefineConfig.defineFlatConfig(config);
