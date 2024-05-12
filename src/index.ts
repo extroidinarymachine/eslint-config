@@ -15,7 +15,13 @@ export default defineFlatConfig([
   ...sheriff(sheriffOptions),
   {
     rules: {
-      'func-style': ['error', 'declaration']
+      'func-style': ['error', 'declaration'],
+      '@typescript-eslint/naming-convention': [
+        {
+          selector: 'import',
+          format: ['PascalCase']
+        }
+      ]
     }
   }
 ]);

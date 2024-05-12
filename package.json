@@ -1,7 +1,7 @@
 {
   "name": "@madefromfatigue/eslint-config",
   "description": "madefromfatigue eslint config",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": "madefromfatigue",
   "type": "module",
   "exports": {
