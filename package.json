@@ -15,9 +15,9 @@
   },
   "devDependencies": {
     "@sherifforg/types": "^3.1.1",
-    "eslint-ts-patch": "^9.2.0-6",
-    "typescript": "^5.4.5",
-    "updates": "^16.0.1"
+    "eslint-ts-patch": "^9.4.0-0",
+    "typescript": "^5.5.2",
+    "updates": "^16.2.0"
   },
   "dependencies": {
     "eslint-config-sheriff": "^18.5.0",
